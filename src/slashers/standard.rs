@@ -6,7 +6,7 @@ pub fn slasher(
     img: &mut SVec,
     out_path: &Path,
     name: &str,
-    thread: u8,
+    threshold: u8,
     crop_height: usize,
     aura_margin: usize,
     scan_step: usize,
@@ -44,7 +44,7 @@ pub fn slasher(
                         }
                     }
 
-                    if local_max > thread {
+                    if local_max > threshold {
                         needs_split = true;
                         break;
                     } else {
@@ -69,7 +69,7 @@ pub fn slasher(
                         }
 
                         offset_correction = offset / 2;
-                        if local_max > thread {
+                        if local_max > threshold {
                             break;
                         }
                     }
@@ -94,7 +94,7 @@ pub fn slasher(
             }
         }
 
-        if max_diff <= thread {
+        if max_diff <= threshold {
             split_line = row;
         }
     }
