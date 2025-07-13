@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-pepecore= { git ="https://github.com/rewaifu/pepecore",package = "pepecore"}
-pepecore-array= { git ="https://github.com/rewaifu/pepecore",package = "pepecore-array"}
+pepecore= { git ="https://github.com/rewaifu/pepecore"}
+pepecore-array= { git ="https://github.com/rewaifu/pepecore"}
 clap = { version = "4.5.40", features = ["derive"] }
 walkdir = "2.5.0"
 indicatif = "0.17"

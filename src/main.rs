@@ -16,7 +16,7 @@ use crate::slashers::standard::slasher;
 #[derive(Parser, Debug)]
 #[command(
     name = "slasher-cli",
-    about = "Нарезает изображения в папках и выводит прогресс"
+    about = "Нарезает изображения"
 )]
 struct Args {
     /// Входная папка с изображениями
@@ -45,7 +45,7 @@ struct Args {
 
     #[arg(short = 'f', long, default_value_t = false)]
     folder_mode: bool,
-    
+
     #[arg(short = 'c', long, default_value_t = false)]
     central_scan: bool,
 }
