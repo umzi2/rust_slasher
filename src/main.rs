@@ -27,9 +27,9 @@ struct Args {
     #[arg(short, long)]
     output: Option<PathBuf>,
 
-    /// Порог потока (thread)
+    
     #[arg(short = 't', long, default_value_t = 0)]
-    thread: u8,
+    threshold: u8,
 
     /// Высота кропа в пикселях
     #[arg(short = 'h', long, default_value_t = 15_000)]
@@ -153,7 +153,7 @@ fn main() -> io::Result<()> {
             &file_name,
             &mut image,
             &output_root,
-            args.thread,
+            args.threshold,
             args.crop_height,
             args.aura_margin,
             args.scan_step,
@@ -173,7 +173,7 @@ fn process_image(
     file_name: &String,
     image: &mut SVec,
     output_root: &Path,
-    thread: u8,
+    threshold: u8,
     crop_height: usize,
     aura_margin: usize,
     scan_step: usize,
@@ -185,7 +185,7 @@ fn process_image(
             image,
             &output_root.join(file_name),
             file_name,
-            thread,
+            threshold,
             crop_height,
             aura_margin,
             scan_step,
@@ -196,7 +196,7 @@ fn process_image(
             image,
             &output_root.join(file_name),
             file_name,
-            thread,
+            threshold,
             crop_height,
             aura_margin,
             scan_step,
