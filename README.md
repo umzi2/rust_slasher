@@ -1,7 +1,8 @@
 Написал простую cli программу для замены стичера, так как он туповат и много ест памяти, а меня это малёк бесит.
 ## Пример использования:
 ```bat
-rust_sticher.exe --input "/home/umzi/PycharmProjects/PythonProject/urban1001" --output "/home/umzi/PycharmProjects/PythonProject/urban1002" --thread 1 --crop-height 15000 --aura-margin 100 --scan-step 5 --folder_mode --central_scan```
+rust_sticher.exe --input "/home/umzi/PycharmProjects/PythonProject/urban1001" --output "/home/umzi/PycharmProjects/PythonProject/urban1002" --thread 1 --crop-height 15000 --aura-margin 100 --scan-step 5 --folder_mode --central_scan
+```
 --input / -i --- Папка откуда будут резатся изображенния, сканирует все подпапки, что важно для -f
 --output / -o --- Путь куда будт сохраняться разрезаные изображенния
 --thread / -t --- Порог ниже которого он считает линию разреза валидной в слешере это был порог вроде, но там от 0 до 100, а тут от 0 до 255 для более точного контроля
